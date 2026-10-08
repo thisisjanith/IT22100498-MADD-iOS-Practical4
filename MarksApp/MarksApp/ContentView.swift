@@ -1,20 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var count = 0
+    @State private var studentName = ""
+    @State private var mark = ""
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Button tapped \(count) times")
-                .font(.title2)
+            Text("Student Registration")
+                .font(.title)
+                .bold()
 
-            Button("Tap Me") {
-                count += 1
+            TextField("Student Name", text: $studentName)
+                .textFieldStyle(.roundedBorder)
+
+            TextField("Mark", text: $mark)
+                .textFieldStyle(.roundedBorder)
+                .keyboardType(.numberPad)
+
+            Button("Show Result") {
+                // Action placeholder
             }
             .buttonStyle(.borderedProminent)
 
-            Button("Reset") {
-                count = 0
+            if studentName.isEmpty {
+                Text("Enter student name above")
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("Welcome, \(studentName)")
+                    .font(.headline)
             }
         }
         .padding()
