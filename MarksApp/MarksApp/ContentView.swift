@@ -8,18 +8,25 @@ struct ContentView: View {
     ]
 
     var body: some View {
-        List(students) { student in
-            HStack {
-                Text(student.name)
+        NavigationStack {
+            List(students) { student in
+                NavigationLink {
+                    StudentDetailView(student: student)
+                } label: {
+                    HStack {
+                        Text(student.name)
 
-                Spacer()
+                        Spacer()
 
-                Text("\(student.mark)")
-                    .bold()
-                    .foregroundStyle(
-                        student.passed ? .green : .red
-                    )
+                        Text("\(student.mark)")
+                            .bold()
+                            .foregroundStyle(
+                                student.passed ? .green : .red
+                            )
+                    }
+                }
             }
+            .navigationTitle("SE4041 Marks")
         }
     }
 }
