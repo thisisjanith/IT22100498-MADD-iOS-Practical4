@@ -1,26 +1,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var count = 0
+
     var body: some View {
         VStack(spacing: 20) {
-            Image(systemName: "graduationcap.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.blue)
+            Text("Button tapped \(count) times")
+                .font(.title2)
 
-            Text("SE4041")
-                .font(.largeTitle)
-                .bold()
-
-            Text("Mobile Application Design & Development")
-
-            HStack {
-                Text("Practical 04")
-
-                Spacer()
-
-                Text("SwiftUI")
+            Button("Tap Me") {
+                count += 1
             }
-            .padding()
+            .buttonStyle(.borderedProminent)
+
+            Button("Reset") {
+                count = 0
+            }
         }
         .padding()
     }
