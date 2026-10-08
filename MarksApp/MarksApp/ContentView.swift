@@ -1,36 +1,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var studentName = ""
-    @State private var mark = ""
+    @State private var students = [
+        Student(name: "Amal", mark: 72),
+        Student(name: "Nimali", mark: 45),
+        Student(name: "Ruwan", mark: 58)
+    ]
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Student Registration")
-                .font(.title)
-                .bold()
+        List(students) { student in
+            HStack {
+                Text(student.name)
 
-            TextField("Student Name", text: $studentName)
-                .textFieldStyle(.roundedBorder)
+                Spacer()
 
-            TextField("Mark", text: $mark)
-                .textFieldStyle(.roundedBorder)
-                .keyboardType(.numberPad)
-
-            Button("Show Result") {
-                // Action placeholder
-            }
-            .buttonStyle(.borderedProminent)
-
-            if studentName.isEmpty {
-                Text("Enter student name above")
-                    .foregroundStyle(.secondary)
-            } else {
-                Text("Welcome, \(studentName)")
-                    .font(.headline)
+                Text("\(student.mark)")
+                    .bold()
+                    .foregroundStyle(
+                        student.passed ? .green : .red
+                    )
             }
         }
-        .padding()
     }
 }
 
