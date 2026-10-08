@@ -1266,24 +1266,24 @@ Open your repository on GitHub and confirm that the latest source files, Xcode p
 
 ## 38. Final Submission Checklist
 
-- [ ] All practical exercises have been completed.
-- [ ] The Xcode project builds and runs in the iOS Simulator.
-- [ ] SwiftUI views, stacks, and modifiers are used appropriately.
-- [ ] `@State` manages changing values.
-- [ ] Text fields use bindings to state.
-- [ ] The `Student` model conforms to `Identifiable`.
-- [ ] The model includes the computed `passed` property.
-- [ ] Valid students can be added to the list.
-- [ ] Invalid input does not add a student or crash the application.
-- [ ] Input fields clear after a successful addition.
-- [ ] Passing and failing results are clearly identifiable.
-- [ ] Each student opens the correct detail screen.
-- [ ] The passed student count updates correctly.
-- [ ] The required testing cases have been checked.
-- [ ] The interface is readable and clearly labelled.
-- [ ] Required screenshots have been added.
-- [ ] All required files have been committed and pushed to GitHub.
-- [ ] The final submission has been verified on GitHub.
+- [x] All practical exercises have been completed.
+- [x] The Xcode project builds and runs in the iOS Simulator.
+- [x] SwiftUI views, stacks, and modifiers are used appropriately.
+- [x] `@State` manages changing values.
+- [x] Text fields use bindings to state.
+- [x] The `Student` model conforms to `Identifiable`.
+- [x] The model includes the computed `passed` property.
+- [x] Valid students can be added to the list.
+- [x] Invalid input does not add a student or crash the application.
+- [x] Input fields clear after a successful addition.
+- [x] Passing and failing results are clearly identifiable.
+- [x] Each student opens the correct detail screen.
+- [x] The passed student count updates correctly.
+- [x] The required testing cases have been checked.
+- [x] The interface is readable and clearly labelled.
+- [x] Required screenshots have been added.
+- [x] All required files have been committed and pushed to GitHub.
+- [x] The final submission has been verified on GitHub.
 
 ---
 
