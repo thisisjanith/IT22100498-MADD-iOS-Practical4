@@ -1,21 +1,12 @@
-//
-//  ContentView.swift
-//  MarksApp
-//
-//  Created by Janith Kavinda on 2026-10-08.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Text("Welcome to SE4041")
+            .font(.title)
+            .bold()
+            .foregroundStyle(.blue)
+            .padding()
     }
 }
 
